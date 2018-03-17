@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content=" FILL ME IN ">
+    <meta name="author" content=" FILL ME IN ">
+    <title>Neighborhood ma</title>
+    <link rel="stylesheet" type="text/css" href="css\style.css">
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="options-box" id="optionBox">
+          <h1>Explore the University of Nottingham</h1>
+          <div>
+            <hr>
+            <span class="text"> Type in an address to search a mark</span>
+            <form id='form'>
+              <input id="type-in"  type="text" data-bind="textInput: query,value: searchInput, valueUpdate: 'afterkeydown', event: {'keyup': clear}" placeholder="Please type in a location">
+            </form>
+            <input id="type-in-button-reset" type="button" value="Reset" data-bind="click: reset">
+            <input id="type-in-button-search" type="button" value="Search" data-bind="click: showResults">
+        </div>
+        <section id="results">
+          <div id="search-results">
+            <h3>Locations: </h3>
+            <ul id='search-results-list' data-bind="foreach: showArray, foreach: filteredNames">
+              <li id='search-results-list-term'>
+                <span id='remove' data-bind="text: title,click: $parent.show"></span> <br /><span id='remove' >Location: </span><br /><span id='remove' >latitute: </span><span id='remove' data-bind="text: location.lat"></span><br /><span id='remove'>longtitute: </span><span id='remove' data-bind="text: location.lng"></span><hr>
+              </li>
+            </ul>
+          </div>
+          <div id="wiki">
+            <h4 id="wiki-head">Relavent Wikipedia information</h2>
+            <ul id="wiki-list" data-bind="foreach: showArrayWiki">
+              <li id="wiki-list-term">
+                <span id='remove' data-bind="text: title"></span> <br /><span id='remove' >Wikipedia: </span><span id='remove' data-bind="text: link"></span><hr />
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- The humbuger icon -->
+      <a href="#menu">
+        <span id="hum">&#9776;</span>
+      </a>
+      <div id="map"><div id="css"></div></div>
+    </main>
+    <script async defer
+        src=
+        "https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=AIzaSyBAD1qkvSluZyzx6BQWO9YTPxznWaNJXFE&v=3&callback=initMap">
+    </script>
+    <script src="js\lib\knockout-3.2.0.js"></script>
+    <script src="js\lib\jquery.min.js"></script>
+    <script src="js\data.js"></script>
+    <script src="js\app.js"></script>
+  </body>
+</html>

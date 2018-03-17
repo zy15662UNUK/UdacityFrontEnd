@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Clicker</title>
+</head>
+<body>
+    <h3>Cat list</h3>
+    <ul id="cat-list" data-bind="foreach: catList">
+      <!-- without $parent: look for the setCat within this context, which is within the cat itself -->
+      <!-- with $parent.:  get out of a binding context-->
+      <li data-bind="text:name, click: $parent.setCat">
+      </li>
+    </ul>
+    <div id="cat" data-bind="with: currentCat">
+        <h2 id="cat-name" data-bind="text: name"></h2>
+        <h3 data-bind="text: level"></h3>
+        <!-- bind to this.name in js file -->
+        <div id="cat-count" data-bind="text: clickCount"></div>
+        <img id="cat-img" src="" alt="cute cat" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
+        <!-- click is the event, incrementCounter is the function to call -->
+        <h3>Nicknames</h3>
+        <ul data-bind="foreach: Nicknames">
+          <li>
+            <span data-bind="text: name"></span>
+          </li>
+        </ul>
+
+    </div>
+    <script src="js/lib/knockout-3.2.0.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

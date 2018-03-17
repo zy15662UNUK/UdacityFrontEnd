@@ -1,0 +1,50 @@
+
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+@media screen and (max-width: 500px) {
+
+  a{
+    margin: 1em;
+    font-size: 2em;
+  }
+
+}
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+  font-size: 25px;
+  color: black;
+}
+a:hover{
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+a:active{
+  font-size: 20px;
+  color: red;
+}
+header{
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #7d97ad;
+}
+.header.row{
+  margin-bottom: 1em;
+}
+main{
+  margin-top: 2em;
+  font-family: Georgia;
+}
+figure{
+  margin-bottom: 1em;
+}
+h2{
+  line-height: 0.8em;
+}
+footer{
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #7d97ad;
+}

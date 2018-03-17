@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      html,
+      body {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      // Every thing happens after page load
+      function initMap() {
+        // Constructor creates a new map - only center and zoom are required.
+        // Where to put the map
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 52.939922, lng: -1.203447},
+          zoom: 13
+        });
+      }
+    </script>
+    <!-- load google map -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7IA5EZ8_jG1yyf6QYb6EQ6xX7ok4RpDM&v=3&callback=initMap">
+    </script>
+
+  </body>
+</html>

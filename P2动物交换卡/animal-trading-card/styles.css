@@ -1,0 +1,27 @@
+.body {
+  border: ridge;
+  padding: 1em;
+  font-family: serif;
+  max-width: 300px;
+}
+.title{
+  font-weight: bolder;
+}
+.knowledge{
+  font-style:italic;
+}
+.content{
+  border: ridge;
+  padding:1em;
+}
+img{
+  width: 300px;
+  border: ridge;
+}
+li,ul{
+  list-style-type:none;
+  padding-left: 0;
+}
+span{
+  font-weight: 900;
+}
